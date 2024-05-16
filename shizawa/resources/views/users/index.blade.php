@@ -4,7 +4,7 @@
 <div class="container mx-auto px-4">
     <div class="flex justify-between items-center">
         <h1 class="text-xl font-bold my-4">ユーザー一覧</h1>
-        <a href="" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <a href="{{ route('users.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             新規ユーザー作成
         </a>
     </div>
@@ -13,7 +13,7 @@
             <thead>
                 <tr>
                     <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light bg-blue-300">名前</th>
-                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light bg-blue-300">Eメールアドレス</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light bg-blue-300">メール</th>
                 </tr>
             </thead>
             <tbody>
