@@ -31,10 +31,8 @@
             <div class="px-4 py-6">
                 <nav class="flex flex-col mt-6">
                     <a href="" class="py-2 text-sm text-gray-700 hover:bg-gray-200">Home</a>
-                    <a href="/posts" class="py-2 mt-2 text-sm text-gray-700 hover:bg-gray-200">マニュアル管理</a>
+                    <a href="/posts" class="py-2 mt-2 text-sm text-gray-700 hover:bg-gray-200">日記管理</a>
                     <a href="/" class="py-2 mt-2 text-sm text-gray-700 hover:bg-gray-200">ユーザー管理</a>
-                    <a href="/categories" class="py-2 mt-2 text-sm text-gray-700 hover:bg-gray-200">カテゴリー管理</a>
-                    <a href="/manufacturers" class="py-2 mt-2 text-sm text-gray-700 hover:bg-gray-200">メーカー管理</a>
                 </nav>
             </div>
         </div>
