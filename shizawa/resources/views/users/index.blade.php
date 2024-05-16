@@ -13,7 +13,7 @@
             <thead>
                 <tr>
                     <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light bg-blue-300">名前</th>
-                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light bg-blue-300">メールアドレス</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light bg-blue-300">Eメールアドレス</th>
                 </tr>
             </thead>
             <tbody>
