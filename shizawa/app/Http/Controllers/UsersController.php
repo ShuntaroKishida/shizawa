@@ -32,4 +32,10 @@ class UsersController extends Controller
 
         return redirect('/');
     }
+
+    public function show($id)
+    {
+        $user = User::find($id);
+        return view('users.show', compact('user'));
+    }
 }
