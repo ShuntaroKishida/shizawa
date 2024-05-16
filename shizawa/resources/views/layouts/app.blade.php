@@ -14,12 +14,12 @@
                 <div>
                     @if(Auth::check())
                         <span class="text-white pr-4">ようこそ、{{ Auth::user()->name }}さん</span>
-                        <form action="" method="POST" class="inline">
+                        <form action="{{ route('logout') }}" method="POST" class="inline">
                             @csrf
                             <button type="submit" class="text-sm bg-red-600 hover:bg-red-800 text-white py-2 px-4 rounded transition-colors duration-200">ログアウト</button>
                         </form>
                     @else
-                        <a href="" class="text-sm bg-yellow-500 hover:bg-yellow-600 text-gray-800 py-2 px-4 rounded transition-colors duration-200">ログイン</a>
+                        <a href="{{ route('login') }}" class="text-sm bg-yellow-500 hover:bg-yellow-600 text-gray-800 py-2 px-4 rounded transition-colors duration-200">ログイン</a>
                     @endif
                 </div>
             </div>
