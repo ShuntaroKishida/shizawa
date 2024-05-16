@@ -4,7 +4,7 @@
 <div class="container mx-auto px-4">
     <div class="flex justify-between items-center">
         <h1 class="text-xl font-bold my-4">ユーザー一覧</h1>
-        <a href="{{ route('users.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <a href="" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             新規ユーザー作成
         </a>
     </div>
@@ -20,7 +20,7 @@
                 @foreach($users as $user)
                 <tr class="hover:bg-grey-lighter">
                     <td class="py-4 px-6 border-b border-grey-light">
-                        <a href="{{ route('users.show', $user->id) }}" class="text-blue-500 hover:text-blue-800 font-bold">{{ $user->name }}</a>
+                        <a href="" class="text-blue-500 hover:text-blue-800 font-bold">{{ $user->name }}</a>
                     </td>
                     <td class="py-4 px-6 border-b border-grey-light">{{ $user->email }}</td>
                     </td>
