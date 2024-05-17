@@ -47,4 +47,31 @@ class PostsController extends Controller
         $post = Post::find($id);
         return view('posts.show', compact('post'));
     }
+
+    public function edit($id)
+    {
+        $post = Post::find($id);
+        return view('posts.edit', compact('post'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $post = Post::findOrFail($id);
+        $validatedData = $request->validate([
+            'sleep' => 'required|integer|between:1,5',
+            'tired' => 'required|integer|between:1,5',
+            'drink' => 'required|integer|between:1,5',
+            'hangover' => 'required|integer|between:1,5',
+            'memo' => 'nullable|string',
+            'image' => 'nullable|image|max:2048'
+        ]);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('public/posts');
+            $validatedData['image'] = basename($path);
+        }
+
+        $post->update($validatedData);
+        return redirect()->route('posts.show', $post->id);
+    }
 }
