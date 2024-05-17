@@ -23,7 +23,9 @@
             <tbody>
                 @foreach($posts as $post)
                 <tr class="hover:bg-grey-lighter">
-                    <td class="py-4 px-6 border-b border-grey-light">{{ $post->created_at->format('Y-m-d H:i') }}</td>
+                    <td class="py-4 px-6 border-b border-grey-light">
+                        <a href="{{ route('posts.show', $post->id) }}" class="text-blue-500 hover:text-blue-800 font-bold">{{ $post->created_at->format('Y-m-d H:i') }}</a>
+                    </td>
                     <td class="py-4 px-6 border-b border-grey-light">{{ $post->sleep }}</td>
                     <td class="py-4 px-6 border-b border-grey-light">{{ $post->tired }}</td>
                     <td class="py-4 px-6 border-b border-grey-light">{{ $post->drink }}</td>
