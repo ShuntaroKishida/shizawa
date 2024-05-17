@@ -4,6 +4,9 @@
 <div class="container mx-auto px-4">
     <div class="flex justify-between items-center">
         <h1 class="text-xl font-bold my-4">投稿一覧</h1>
+        <a href="{{ route('posts.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            新規投稿作成
+        </a>
     </div>
     <div class="bg-white shadow-md rounded my-6">
         <table class="text-left w-full border-collapse">
