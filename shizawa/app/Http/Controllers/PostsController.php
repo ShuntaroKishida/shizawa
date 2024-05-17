@@ -32,7 +32,19 @@ class PostsController extends Controller
         $post = new Post();
         $post->fill($validatedData);
         $post->user_id = auth()->id();
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('public/posts');
+            $post->image = basename($path);
+        }
+
         $post->save();
         return redirect()->route('posts.index');
+    }
+
+    public function show($id)
+    {
+        $post = Post::find($id);
+        return view('posts.show', compact('post'));
     }
 }
